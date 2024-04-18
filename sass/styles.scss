@@ -1,6 +1,10 @@
+// Add Font Awesome
 @use "./fs/fontawesome.scss";
 @use "./fs/solid.scss";
 @use "./fs/brands.scss";
+
+// Add components and style
+@use "./base";
 @use "./components";
 @use "./layout";
 @use "./pages";
