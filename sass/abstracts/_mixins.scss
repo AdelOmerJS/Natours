@@ -1,0 +1,38 @@
+@use "./variables" as *;
+
+@mixin clearFix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin floatCol {
+  float: left;
+
+  &:not(:last-child) {
+    margin-right: $gutter-horizontal;
+  }
+}
+
+@mixin resposive($breakpoint) {
+  // (min-width: 600px) and (max-width: 900px)
+  // @media (width >= 600px) and (width <= 700px) {
+  //   @content;
+  // }
+  //  @media (30em <= width <= 50em) {
+  //   @content;
+  // }
+  /*
+  - small
+  - medium
+  - large
+  - ex-large
+  */
+  @if ($breakpoint == small) {
+    @media (575px <= width <= 767px) {
+      @content;
+    }
+  }
+}
