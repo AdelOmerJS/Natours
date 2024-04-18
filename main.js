@@ -1,10 +1,3 @@
 import "./sass/styles.scss";
 
-/**
- * 1 -
- * 2 - 139,000
- * 3 - 12,900
- * 4 - 107,000
- * 5 - 168,000
- * 6 -
- */
+console.log("in adel versoion");
