@@ -16,23 +16,47 @@
 //   }
 // }
 
-// @mixin resposive($breakpoint) {
-//   // (min-width: 600px) and (max-width: 900px)
-//   // @media (width >= 600px) and (width <= 700px) {
-//   //   @content;
-//   // }
-//   //  @media (30em <= width <= 50em) {
-//   //   @content;
-//   // }
-//   /*
-//   - small
-//   - medium
-//   - large
-//   - ex-large
-//   */
-//   @if ($breakpoint == small) {
-//     @media (575px <= width <= 767px) {
-//       @content;
-//     }
-//   }
-// }
+@mixin transition($time) {
+  transition: all $time;
+}
+@mixin centerElemet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin resposive($breakpoint) {
+  /*
+  - xsm
+  - sm
+  - md
+  - lg
+  - xlg
+  */
+
+  //   xsm
+  @if ($breakpoint == xsm) {
+    @media (0 <= width <= 767px) {
+      @content;
+    }
+  }
+  //   sm
+  @if ($breakpoint == sm) {
+    @media (768px <= width <= 991px) {
+      @content;
+    }
+  }
+  // md
+  @if ($breakpoint == md) {
+    @media (992px <= width <= 1199px) {
+      @content;
+    }
+  }
+  // lg
+  @if ($breakpoint == lg) {
+    @media (width >= 1200px) {
+      @content;
+    }
+  }
+}

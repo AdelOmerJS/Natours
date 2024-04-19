@@ -1,0 +1,18 @@
+@use "../abstracts" as *;
+
+.container {
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include resposive(lg) {
+    width: 1150px;
+  }
+  @include resposive(md) {
+    width: 970px;
+  }
+  @include resposive(sm) {
+    width: 760px;
+  }
+}
