@@ -52,3 +52,20 @@
     gap: 2rem;
   }
 }
+
+.stories {
+  position: relative;
+  padding: 10rem 0;
+}
+
+.booking {
+  background: linear-gradient(to right bottom, $Light_green, $Medium_green);
+  margin-top: -7rem;
+  padding: 20rem 0;
+}
+
+.footer {
+  padding: 10rem 0;
+  background-color: #333;
+  color: $white;
+}

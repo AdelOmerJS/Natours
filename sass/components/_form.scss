@@ -1,0 +1,105 @@
+@use "../abstracts" as *;
+
+.book {
+  background-image: linear-gradient(
+      105deg,
+      rgba(255, 255, 255, 0.8) 0%,
+      rgba(255, 255, 255, 0.8) 50%,
+      transparent 50%
+    ),
+    url(/img/nat-10.jpg);
+  background-size: cover;
+  height: 50rem;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.4);
+  &__form {
+    width: 50%;
+    height: 100%;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+  padding: 2rem;
+
+  &__input {
+    padding: 1rem 1.5rem;
+    border: none;
+    border-bottom: 3px solid transparent;
+    display: block;
+    width: 90%;
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.4);
+    border-radius: 0.4rem;
+    &:focus {
+      border-bottom: 3px solid $Dark_green;
+      outline: none;
+    }
+    &:focus + label {
+      opacity: 1;
+      top: 1rem;
+    }
+    &:focus:invalid {
+      border-bottom: 3px solid $color-secondary-dark;
+    }
+  }
+  &__label {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    position: relative;
+    left: 1.3rem;
+    top: -3rem;
+    @include transition(0.4s);
+    opacity: 0;
+  }
+  &__radio-group {
+    width: 48%;
+    display: inline-block;
+
+    @include resposive(md) {
+      display: block;
+      margin-bottom: 4rem;
+      width: 100%;
+    }
+  }
+  &__radio-input {
+    opacity: 0;
+  }
+  &__radio-label {
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    position: relative;
+    padding-left: 1rem;
+  }
+  &__radio-btn {
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+    left: -24px;
+    top: -6px;
+    border: 5px solid $Dark_green;
+    padding: 0.2rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      background-color: $Dark_green;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+
+  &__radio-input:checked ~ &__radio-label &__radio-btn::after {
+    opacity: 1;
+  }
+}
