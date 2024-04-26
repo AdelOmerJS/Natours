@@ -3,3 +3,36 @@
 .center-text {
   text-align: center;
 }
+
+.m-b-8 {
+  margin-bottom: 8rem;
+}
+@for $i from 1 through 10 {
+  .m-b-#{$i} {
+    margin-bottom: #{$i}rem;
+  }
+}
+
+.c-s-g {
+  background-image: linear-gradient(
+    to right bottom,
+    $color-secondary-light,
+    $color-secondary-dark
+  );
+}
+
+.c-g-g {
+  background-image: linear-gradient(
+    to right bottom,
+    $Light_green,
+    $Medium_green
+  );
+}
+
+.c-t-g {
+  background-image: linear-gradient(
+    to right bottom,
+    $color-tertiary-light,
+    $color-tertiary-dark
+  );
+}

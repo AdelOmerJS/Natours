@@ -6,13 +6,19 @@
   margin-right: auto;
   margin-left: auto;
 
+  @include resposive(xlg) {
+    max-width: 1140px; /* Adjust width for extra large screens */
+  }
   @include resposive(lg) {
-    width: 1150px;
+    max-width: 960px; /* Adjust width for large screens */
   }
   @include resposive(md) {
-    width: 970px;
+    max-width: 720px; /* Adjust width for medium screens */
   }
   @include resposive(sm) {
-    width: 760px;
+    max-width: 640px; /* Limit the width for small screens */
+  }
+  @include resposive(xsm) {
+    width: 100%;
   }
 }

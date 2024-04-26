@@ -37,24 +37,30 @@
 
   //   xsm
   @if ($breakpoint == xsm) {
-    @media (0 <= width <= 767px) {
+    @media (width <= 575px) {
       @content;
     }
   }
-  //   sm
+  /* Small devices (phones) sm */
   @if ($breakpoint == sm) {
-    @media (768px <= width <= 991px) {
+    @media (width <= 767px) {
       @content;
     }
   }
-  // md
+  /* Medium devices (tablets) md */
   @if ($breakpoint == md) {
-    @media (992px <= width <= 1199px) {
+    @media (width <= 991px) {
       @content;
     }
   }
-  // lg
+  /* Large devices (desktops) lg */
   @if ($breakpoint == lg) {
+    @media (width <= 1199px) {
+      @content;
+    }
+  }
+  /* Extra large devices (large desktops) */
+  @if ($breakpoint == xlg) {
     @media (width >= 1200px) {
       @content;
     }

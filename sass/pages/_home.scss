@@ -1,0 +1,54 @@
+@use "../abstracts" as *;
+
+.about {
+  background-color: $section_color;
+  padding: 20rem 0;
+  margin-top: -15rem;
+
+  @include resposive(xsm) {
+    & .row {
+      display: block;
+
+      .col {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.features {
+  &--boxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      $Light_green_0_8,
+      $Dark_green_0_8
+    ),
+    url(../../img/nat-4.jpg);
+  background-size: cover;
+  background-position: top;
+  transform: skewY(-7deg);
+  margin-top: -11rem;
+
+  & > [class="container"] {
+    transform: skewY(7deg);
+  }
+}
+
+.tours {
+  padding-top: 20rem;
+  padding-bottom: 40rem;
+  background-color: $color-grey-light-1;
+  &--cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    grid-template-rows: repeat(auto-fill, 1fr);
+    gap: 2rem;
+  }
+}

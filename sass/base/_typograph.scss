@@ -20,10 +20,10 @@ body {
       display: block;
       margin-bottom: 2rem;
       animation: fromRight 0.4s linear;
-      @include resposive(xsm) {
+
+      @include resposive(sm) {
         font-size: 3rem;
         letter-spacing: 2rem;
-        font-weight: 700;
       }
     }
     &--sub {
@@ -33,11 +33,38 @@ body {
       letter-spacing: 1.5rem;
       animation: fromLeft 0.4s linear;
 
-      @include resposive(xsm) {
-        font-size: 2rem;
-        font-weight: 400;
-        letter-spacing: 1rem;
+      @include resposive(sm) {
+        font-size: 1.5rem;
       }
     }
   }
+  &__sceondary {
+    background-image: linear-gradient(to right, $Light_green, $Dark_green);
+    font-size: 3rem;
+    text-transform: uppercase;
+    background-clip: text;
+    color: transparent;
+    font-weight: 800;
+    letter-spacing: 0.4rem;
+    @include transition(0.4s);
+    display: inline-block;
+
+    &:hover {
+      transform: skewY(3deg) scale(1.1);
+    }
+  }
+  &__tertiary {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $gray;
+  }
+}
+
+.para {
+  max-width: 75%;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: $gray;
+  text-align: left;
 }
